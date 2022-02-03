@@ -39,7 +39,7 @@ function App() {
       <main>
         <h1 className="title"> Quick React Geocoder </h1>
         <input type="text" className="place-form" placeholder="Search for an address..." onChange={e => setQuery(e.target.value)} value={query} onKeyPress={search}></input>
-        {(Object.keys(coords).length != 0) ? (
+        {(Object.keys(coords).length !== 0) ? (
           <div>
             <h3 className="coords"> {cleanUp(coords[0].geometry.location.lat)}, {cleanUp(coords[0].geometry.location.lng)} </h3>
             <h4 className = "address"> {coords[0].formatted_address} </h4>
